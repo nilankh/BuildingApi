@@ -2,7 +2,14 @@ const express = require('express');
 
 const app = express();
 const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
 const port = 8000;
+
+// parse requests of content type
+app.use(bodyParser.urlencoded({extended: true}));
+// parse request of content-type
+app.use(bodyParser.json());
+
 
 const postsRoute = require('./routes/posts');
 

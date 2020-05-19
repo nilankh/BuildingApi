@@ -11,7 +11,7 @@ const PostSchema = mongoose.Schema({
         required: true
     }, 
     date:{
-        type: Date.now,
+        type: Date,
         default: Date.now
     } 
 });
